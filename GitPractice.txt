@@ -1,0 +1,286 @@
+DELL@DESKTOP-46DH1CT MINGW64 ~
+$ ls
+'3D Objects'/         FirstApp/                NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                       'Saved Games'/     ntuser.dat.LOG2
+ AppData/             IntelGraphicsProfiles/   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   Searches/         ntuser.ini
+'Application Data'@   Links/                   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   SendTo@           package-lock.json
+ Contacts/           'Local Settings'@         NetHood@                                                                                      'Start Menu'@      package.json
+ Cookies@             MakeZ/                   OneDrive/                                                                                      Templates@
+ Documents/           Music/                  'OneDrive - Codeboard Technology Private Limited'/                                              Videos/
+ Downloads/          'My Documents'@           PrintHood@                                                                                     node_modules/
+ Favorites/           NTUSER.DAT               Recent@                                                                                        ntuser.dat.LOG1
+
+DELL@DESKTOP-46DH1CT MINGW64 ~
+$ cd OneDrive
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive
+$ mkdir GIT-HUB
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive
+$ ls
+GIT-HUB/
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive
+$ cd GIT-HUB
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB
+$ git init
+Initialized empty Git repository in C:/Users/DELL/OneDrive/GIT-HUB/.git/
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls -a
+./  ../  .git/
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls .git
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ touch sampefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls
+sampefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sampefile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git add .
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git commit -m "First Commit"
+[master (root-commit) 0f8da2d] First Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sampefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ vi samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        samplefile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git add .
+warning: in the working copy of 'samplefile.txt', LF will be replaced by CRLF the next time Git touches it
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   samplefile.txt
+
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git commit -m "third commit"
+[master 64230a4] third commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls
+sampefile.txt  samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls -a
+./  ../  .git/  sampefile.txt  samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git log
+commit 64230a4895ef38a264254077cfebd3da2b567bb3 (HEAD -> master)
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:28:47 2024 +0530
+
+    third commit
+
+commit 0f8da2ddac60834b0931d75c24bfdb62558127b2
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 16:33:46 2024 +0530
+
+    First Commit
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ rm -rf samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git add .
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    samplefile.txt
+
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git commit - m "deleted file"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'm' did not match any file(s) known to git
+error: pathspec 'deleted file' did not match any file(s) known to git
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git commit -m "deleted file"
+[master c84a222] deleted file
+ 1 file changed, 4 deletions(-)
+ delete mode 100644 samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git log
+commit c84a222df4f038c78ae2d4b3337d5291a2033a1d (HEAD -> master)
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:32:35 2024 +0530
+
+    deleted file
+
+commit 64230a4895ef38a264254077cfebd3da2b567bb3
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:28:47 2024 +0530
+
+    third commit
+
+commit 0f8da2ddac60834b0931d75c24bfdb62558127b2
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 16:33:46 2024 +0530
+
+    First Commit
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ^C
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git reset 64230a4895ef38a264254077cfebd3da2b567bb3
+Unstaged changes after reset:
+D       samplefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    samplefile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git reset c84a222df4f038c78ae2d4b3337d5291a2033a1d
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls
+sampefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git log
+commit c84a222df4f038c78ae2d4b3337d5291a2033a1d (HEAD -> master)
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:32:35 2024 +0530
+
+    deleted file
+
+commit 64230a4895ef38a264254077cfebd3da2b567bb3
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:28:47 2024 +0530
+
+    third commit
+
+commit 0f8da2ddac60834b0931d75c24bfdb62558127b2
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 16:33:46 2024 +0530
+
+    First Commit
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ls
+sampefile.txt
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git log
+commit c84a222df4f038c78ae2d4b3337d5291a2033a1d (HEAD -> master)
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:32:35 2024 +0530
+
+    deleted file
+
+commit 64230a4895ef38a264254077cfebd3da2b567bb3
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:28:47 2024 +0530
+
+    third commit
+
+commit 0f8da2ddac60834b0931d75c24bfdb62558127b2
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 16:33:46 2024 +0530
+
+    First Commit
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ git log
+commit c84a222df4f038c78ae2d4b3337d5291a2033a1d (HEAD -> master)
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:32:35 2024 +0530
+
+    deleted file
+
+commit 64230a4895ef38a264254077cfebd3da2b567bb3
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 18:28:47 2024 +0530
+
+    third commit
+
+commit 0f8da2ddac60834b0931d75c24bfdb62558127b2
+Author: RajkumarR-official <rajkumarrajendiran001@gmail.com>
+Date:   Wed May 8 16:33:46 2024 +0530
+
+    First Commit
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$ ^C
+
+DELL@DESKTOP-46DH1CT MINGW64 ~/OneDrive/GIT-HUB (master)
+$
